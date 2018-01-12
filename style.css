@@ -113,6 +113,7 @@ h2 {
   font-weight: 400;
   font-size: 11pt;
   color: #555;
+  /**** minor tweaks on the icon fonts ****/
 }
 #main h2 > i {
   /* use absolute position to prevent icon's width from misaligning title */
@@ -138,7 +139,6 @@ h2 {
   font-size: 0;
   content: ' ';
 }
-/**** minor tweaks on the icon fonts ****/
 #main h2 > .fa-graduation-cap {
   left: calc(-21pt);
   top: 2pt;
@@ -146,8 +146,8 @@ h2 {
 #main h2 > .fa-suitcase {
   top: 1pt;
 }
-#main h2 > .fa-folder-open {
-  top: 1.5pt;
+#main h2 > .fa-cogs {
+  top: 1.2pt;
 }
 /**** individual row blocks (date - decorator - details) ****/
 .blocks {
