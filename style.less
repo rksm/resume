@@ -60,8 +60,8 @@ table {
 @sidebar-horizontal-padding: 0.2in;
 
 /* XXX: using px for very good precision control */
-@decorator-outer-offset-top: 10px;
-@decorator-outer-offset-left: -5.5px;
+@decorator-outer-offset-top: 9px;
+@decorator-outer-offset-left: -4.3px;
 @decorator-border-width: 1px;
 @decorator-outer-dim: 9px;
 @decorator-border: 1px solid #ccc;
@@ -110,12 +110,11 @@ li {
 
 }
 
-  @media print {
-      #sidebar {
-      background-color: red !important;
-      border-left: #f2f2f2 1px solid !important;
-      }
-  }
+@media print {
+    #sidebar {
+	border-left: #f2f2f2 1px solid !important;
+    }
+}
 
 
 /* main */
@@ -129,6 +128,7 @@ li {
   position: relative;
   left: 0.55in;
   margin-bottom: 0.3in;
+  margin-left: 0.45in;
   line-height: 1.2;
   // text-align: center;
 }
@@ -241,43 +241,21 @@ li {
   width: 2pt;
   min-height: 100%;
   border-left: @decorator-border;
+  &::after {
+      position: absolute;
+      top: calc(@decorator-outer-offset-top);
+      left: calc(@decorator-outer-offset-left);
+      font-family: "Font Awesome 5 Pro";
+      content: '\f111';
+      color: #555;
+      font-size: 5.5pt;
+      display: block;
+  }
 }
 
-/*
- * XXX: Use two filled circles to achieve the circle-with-white-border effect.
- * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
- * 1) overflows the grayshade background (if no background-clip is set), or
- * 2) shows decorator line which should've been masked by the white border
- *
- */
-
-.decorator::before {
-  position: absolute;
-  top: @decorator-outer-offset-top;
-  left: @decorator-outer-offset-left;
-  content: ' ';
-  display: block;
-  width: @decorator-outer-dim;
-  height: @decorator-outer-dim;
-  border-radius: calc(@decorator-outer-dim / 2);
-  background-color: #fff;
-}
-
-.decorator::after {
-  position: absolute;
-  top: calc(@decorator-outer-offset-top + @decorator-border-width);
-  left: calc(@decorator-outer-offset-left + @decorator-border-width);
-  content: ' ';
-  display: block;
-  width: calc(@decorator-outer-dim - (@decorator-border-width * 2));
-  height: calc(@decorator-outer-dim - (@decorator-border-width * 2));
-  border-radius: calc((@decorator-outer-dim - (@decorator-border-width * 2)) / 2);
-  background-color: #555;
-}
 
 .blocks:last-child .decorator { /* slightly shortens it */
-  margin-bottom: 0.25in;
+  margin-bottom: 0.09in;
 }
 
 /***** fine-tunes on the details block where the real juice is *****/

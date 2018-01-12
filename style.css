@@ -72,7 +72,6 @@ li {
 }
 @media print {
   #sidebar {
-    background-color: red !important;
     border-left: #f2f2f2 1px solid !important;
   }
 }
@@ -87,6 +86,7 @@ h2 {
   position: relative;
   left: 0.55in;
   margin-bottom: 0.3in;
+  margin-left: 0.45in;
   line-height: 1.2;
 }
 #title h1 {
@@ -183,39 +183,19 @@ h2 {
   min-height: 100%;
   border-left: 1px solid #ccc;
 }
-/*
- * XXX: Use two filled circles to achieve the circle-with-white-border effect.
- * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
- * 1) overflows the grayshade background (if no background-clip is set), or
- * 2) shows decorator line which should've been masked by the white border
- *
- */
-.decorator::before {
-  position: absolute;
-  top: 10px;
-  left: -5.5px;
-  content: ' ';
-  display: block;
-  width: 9px;
-  height: 9px;
-  border-radius: calc(4.5px);
-  background-color: #fff;
-}
 .decorator::after {
   position: absolute;
-  top: calc(11px);
-  left: calc(-4.5px);
-  content: ' ';
+  top: calc(9px);
+  left: calc(-4.3px);
+  font-family: "Font Awesome 5 Pro";
+  content: '\f111';
+  color: #555;
+  font-size: 5.5pt;
   display: block;
-  width: calc(7px);
-  height: calc(7px);
-  border-radius: calc(3.5px);
-  background-color: #555;
 }
 .blocks:last-child .decorator {
   /* slightly shortens it */
-  margin-bottom: 0.25in;
+  margin-bottom: 0.09in;
 }
 /***** fine-tunes on the details block where the real juice is *****/
 .details {
