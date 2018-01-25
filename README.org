@@ -1,8 +1,10 @@
 * html-resume
 
+[[https://robert.kra.hn/resume.pdf][PDF version]]
+
 Derived from [[https://github.com/mnjul/html-resume][mnjul/html-resume]]. Many thanks @mnjul.
 
 
-* License
+** License
 
 This project is licensed under the Apache License.
