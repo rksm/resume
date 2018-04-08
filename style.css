@@ -300,10 +300,10 @@ h2 {
   position: absolute;
   bottom: 0.2in;
   right: 0.2in;
+  left: 0.2in;
   font-size: 7.5pt;
   font-style: italic;
   line-height: 1.1;
-  text-align: right;
   color: #777;
 }
 #disclaimer code {
