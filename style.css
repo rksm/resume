@@ -1,3 +1,4 @@
+/* XXX: using px for very good precision control */
 @page {
   size: letter portrait;
   margin: 0px;
@@ -18,13 +19,13 @@ table th {
   white-space: nowrap;
 }
 .tech-table-fence {
-  flex: 0 0 calc(0.8in + 1px);
-  padding-top: calc(5pt + 2.5pt) !important;
+  flex: 0 0 calc(0.81in);
+  padding-top: calc(7.5pt) !important;
   padding-right: calc(0.2in);
   font-size: 6pt;
   text-align: right;
   line-height: 1;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #cccccc;
 }
 .tech-table-fence .details::before {
   position: relative;
@@ -34,7 +35,6 @@ table th {
   height: 10pt;
   content: '|';
 }
-/* XXX: using px for very good precision control */
 body {
   width: 8.5in;
   height: 11in;
@@ -57,14 +57,14 @@ li {
 #main {
   float: left;
   width: 6.4in;
-  padding: 0.25in 0.25in 0 0.25in;
+  padding: 0.1in 0.25in 0 0.25in;
   font-size: 7pt;
 }
 #sidebar {
   float: right;
   position: relative;
   /* for disclaimer */
-  width: calc(8.5in - 6.4in);
+  width: calc(2.1in);
   height: 100%;
   padding: 0.6in 0.2in;
   background-color: #f2f2f2 !important;
@@ -85,7 +85,7 @@ h2 {
 #title {
   position: relative;
   left: 0.55in;
-  margin-bottom: 0.2in;
+  margin-bottom: 0.15in;
   margin-left: 0.45in;
   line-height: 1.2;
 }
@@ -103,13 +103,13 @@ h2 {
 }
 /*** categorial blocks ***/
 .main-block {
-  margin-top: 0.1in;
+  margin-top: 0.02in;
 }
 #main h2 {
   position: relative;
   top: 5pt;
   /* XXX: 0.5px for aligning fx printing */
-  left: calc(0.8in + 0.2in);
+  left: calc(1in);
   font-weight: 400;
   font-size: 11pt;
   color: #555;
@@ -127,20 +127,20 @@ h2 {
 }
 #main h2::after {
   /* extends the decorator line */
-  height: calc(5pt * 2);
+  height: calc(7.5pt);
   position: relative;
-  top: calc(-1 * 5pt);
+  top: calc(-5pt);
   /* XXX: 0.5px for aligning fx printing */
-  left: calc(-1 * 0.2in);
+  left: calc(-0.2in);
   display: block;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #cccccc;
   z-index: 0;
   line-height: 0;
   font-size: 0;
   content: ' ';
 }
 #main h2 > .fa-graduation-cap {
-  left: calc(-19pt - 2pt);
+  left: calc(-21pt);
   top: 2pt;
 }
 #main h2 > .fa-suitcase {
@@ -159,7 +159,7 @@ h2 {
 }
 .date {
   flex: 0 0 0.8in;
-  padding-top: calc(5pt + 2.5pt) !important;
+  padding-top: calc(7.5pt) !important;
   padding-right: 0.2in;
   font-size: 6pt;
   text-align: right;
@@ -181,7 +181,7 @@ h2 {
   position: relative;
   width: 2pt;
   min-height: 100%;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #cccccc;
 }
 .decorator::after {
   position: absolute;
@@ -201,7 +201,7 @@ h2 {
 .details {
   flex: 1 0 0;
   padding-left: 0.2in;
-  padding-top: calc(5pt - 0.5pt) !important;
+  padding-top: calc(4.5pt) !important;
   /* not sure why but this is needed for better alignment */
 }
 .details header {

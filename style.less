@@ -1,4 +1,24 @@
-// fooo
+@page-width: 8.5in;
+@page-height: 11in;
+@main-width: 6.4in;
+@sidebar-width: calc(@page-width - @main-width);
+@decorator-horizontal-margin: 0.2in;
+
+@sidebar-horizontal-padding: 0.2in;
+
+/* XXX: using px for very good precision control */
+@decorator-outer-offset-top: 9px;
+@decorator-outer-offset-left: -4.3px;
+@decorator-border-width: 1px;
+@decorator-outer-dim: 9px;
+@decorator-border: 1px solid #ccc;
+
+@row-blocks-padding-top: 5pt;
+@date-block-width: 0.8in;
+
+@main-blocks-title-icon-offset-left: -19pt;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 @page {
   size: letter portrait;
@@ -31,7 +51,8 @@ table {
 }
 
 .tech-table-fence {
-  flex: 0 0 calc(@date-block-width + 1px);
+  // flex: 0 0 calc(0.8in + 1px);
+  flex: 0 0 calc(@date-block-width + 0.01in);
   padding-top: calc(@row-blocks-padding-top + 2.5pt) !important;
   padding-right: calc(@decorator-horizontal-margin);
   font-size: 6pt;
@@ -49,27 +70,7 @@ table {
     content: '|';
 }
 
-
-
-@page-width: 8.5in;
-@page-height: 11in;
-@main-width: 6.4in;
-@sidebar-width: calc(@page-width - @main-width);
-@decorator-horizontal-margin: 0.2in;
-
-@sidebar-horizontal-padding: 0.2in;
-
-/* XXX: using px for very good precision control */
-@decorator-outer-offset-top: 9px;
-@decorator-outer-offset-left: -4.3px;
-@decorator-border-width: 1px;
-@decorator-outer-dim: 9px;
-@decorator-border: 1px solid #ccc;
-
-@row-blocks-padding-top: 5pt;
-@date-block-width: 0.8in;
-
-@main-blocks-title-icon-offset-left: -19pt;
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 body {
@@ -95,7 +96,7 @@ li {
 #main {
   float: left;
   width: @main-width;
-  padding: 0.25in 0.25in 0 0.25in;
+  padding: 0.1in 0.25in 0 0.25in;
   font-size: 7pt;
 }
 
@@ -127,7 +128,7 @@ li {
 #title {
   position: relative;
   left: 0.55in;
-  margin-bottom: 0.2in;
+  margin-bottom: 0.15in;
   margin-left: 0.45in;
   line-height: 1.2;
   // text-align: center;
@@ -151,7 +152,7 @@ li {
 /*** categorial blocks ***/
 
 .main-block {
-  margin-top: 0.1in;
+  margin-top: 0.02in;
 }
 
 #main h2 {
@@ -174,7 +175,7 @@ li {
   }
 
   &::after { /* extends the decorator line */
-      height: calc(@row-blocks-padding-top * 2);
+      height: calc(@row-blocks-padding-top * 1.5);
       position: relative;
       top: calc(-1 * @row-blocks-padding-top);
       /* XXX: 0.5px for aligning fx printing */
